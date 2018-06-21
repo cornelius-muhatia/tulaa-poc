@@ -2,6 +2,7 @@ package com.cm.projects.talaa.poc;
 
 import com.cm.projects.talaa.poc.services.StewardService;
 import com.cm.projects.talaa.poc.services.StewardServiceTemplate;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class TalaaPocApplicationTests {
 
     @Test
     public void testReverseString() {
-        assertSame("Testing reversing string while maintaining special chars", "a,b$c", this.stewardService.reverseString("a,b$c"));
+        assertEquals("Testing reversing string while maintaining special chars","c,b$a", this.stewardService.reverseString("a,b$c"));
     }
 
 }
