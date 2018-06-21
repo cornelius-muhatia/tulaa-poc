@@ -22,16 +22,22 @@ export class QuizThreeComponent implements OnInit {
 
     ngOnInit() {
     }
-    
+    /**
+     * Used to add element index which in turn triggers more inputs to be generated
+     */
     addField(){
         this.elements.push(this.elements.length);
     }
-    
+    /**
+     * Used to reset the generated fields to default one field
+     */
     resetFields(){
         this.data.input = [];
         this.elements = [0];
     }
-    
+    /**
+     * Used to send user input array to backend service
+     */
     onSubmit(form: NgForm){
         this.stewardService.postJson("/validate-triplex", this.data).subscribe(response => {
             if (response.code == 200){

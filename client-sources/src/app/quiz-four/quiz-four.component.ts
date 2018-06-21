@@ -21,13 +21,15 @@ export class QuizFourComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  /**
+   * Used to send input string to the backend service
+   */
   onSubmit(form: NgForm){
       this.stewardService.postFormData("/compile-blocks", this.data).subscribe(response => {
           if (response.code == 200){
               this.response = response.data;
               this.notify.showSuccess("Request processed successfully");
-              form.resetForm();
+//              form.resetForm();
           } else {
               this.notify.showDanger(response.message);
           }

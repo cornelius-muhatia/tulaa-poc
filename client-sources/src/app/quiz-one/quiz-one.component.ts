@@ -21,7 +21,9 @@ export class QuizOneComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+  /**
+   * Used to send user input to the backend service.
+   */
   onSubmit(form: NgForm){
       this.stewardService.postFormData("/reverse-string", this.data).subscribe(response => {
           if (response.code == 200){
