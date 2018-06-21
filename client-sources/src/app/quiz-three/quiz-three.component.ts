@@ -26,6 +26,8 @@ export class QuizThreeComponent implements OnInit {
      * Used to add element index which in turn triggers more inputs to be generated
      */
     addField(){
+        console.debug("Pushed index " + this.elements.length);
+        this.data.input = [];
         this.elements.push(this.elements.length);
     }
     /**

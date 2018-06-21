@@ -25,5 +25,16 @@ public class TalaaPocApplicationTests {
     public void testReverseString() {
         assertEquals("Testing reversing string while maintaining special chars","c,b$a", this.stewardService.reverseString("a,b$c"));
     }
+    
+    @Test
+    public void testTripletArray(){
+        int input[] = {3, 1, 4, 6, 5};
+        assertEquals("Testing if an array is triplet", true, this.stewardService.isTripletArray(input));
+    }
+    
+    @Test
+    public void testCodeBlocks(){
+        assertEquals("Test correct order brackets", false, this.stewardService.compileCodeBlock("{{{]"));
+    }
 
 }

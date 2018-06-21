@@ -46,10 +46,13 @@ export class StewardServiceService<T, E> {
     private handleError<ResponseWrapper>() {
         return (error: HttpErrorResponse): Observable<any> => {
             const res = new ResponseWrapper();
-            //            console.error(error); // log to console instead
+                        console.error("StewardService has expirienced an error", error); // log to console instead
             if (error.status == 500) {
                 res.code = error.status;
                 res.message = 'Sorry internal server error occured please try again later';
+            } else if(error.status == 0){
+                res.code = error.status;
+                res.message = "Failed to reach the api. Please ensure the api is running";
             } else {
                 res.code = error.status;
                 res.message = error.error.message;

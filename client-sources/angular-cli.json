@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "../tulaa-poc-client/src/main/resources/static/",
       "assets": [
         "assets",
         "favicon.ico"
