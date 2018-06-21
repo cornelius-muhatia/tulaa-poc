@@ -1,0 +1,20 @@
+server:
+    port: 9092
+app:
+    params:
+        api-url: http://localhost:9091
+zuul:
+    sensitive-headers: Cookie,Set-Cookie
+    routes:
+        reverse-string:
+            url: ${app.params.api-url}
+            path: /reverse-string
+        validate-triplex:
+            url: ${app.params.api-url}
+            path: /validate-triplex
+        compile-blocks:
+            url: ${app.params.api-url}
+            path: /compile-blocks
+logging:
+    level:
+        root: DEBUG

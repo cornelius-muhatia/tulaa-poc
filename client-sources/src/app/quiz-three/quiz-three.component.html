@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Question Three</h4>
+                        <p class="card-category">Given an array of integers, write a function that returns true if there is a triplet (a, b, c)
+                            that satisfies a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+                    </div>
+                    <div class="card-body">
+                        <form (ngSubmit)="onSubmit(triplexForm)" #triplexForm="ngForm" role="form">
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let element of elements">
+                                     <mat-form-field class="example-full-width">
+                                        <input  matInput [(ngModel)]="data.input[element]" name="item[element]" matInput placeholder="number" required="required"/>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button (click)="resetFields()" type="button" mat-raised-button class="btn btn-success btn-sm">Reset Fields</button>
+                            <button (click)="addField()" type="button" mat-raised-button class="btn btn-info btn-sm">Add Field</button>
+                            <button [disabled]="!triplexForm.form.valid"  mat-raised-button type="submit" class="btn btn-danger pull-right btn-sm">Process</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header card-header-success">
+                        <h4 class="card-title">Output</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">
+                            Input Array: {{ '{' }}<span *ngFor="let n of data.input">{{n}}, </span>{{ '}' }} <br />
+                            <strong>
+                                Output: {{response}} <br />
+                            </strong>
+                            
+                            {{ (response == true) ? '' : '' }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
