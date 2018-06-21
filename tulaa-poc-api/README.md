@@ -15,5 +15,13 @@ To run the application change into target directory using your command line and 
     $ java -jar tulaa-poc-1.0.0.jar
 ----
 
-### Prerequisites
+After the application runs successfully you can access api documentation from http://localhost:9091/swagger-ui.html#!/main-resource/compileBlocksUsingPOST
+
+## Build With
+
+* [Maven](https://maven.apache.org/) - Dependency Management
+* [Spring Boot](http://spring.io/) - Java Enterprise Edition Framework
+
+## Author
+* Cornelius M.
 
