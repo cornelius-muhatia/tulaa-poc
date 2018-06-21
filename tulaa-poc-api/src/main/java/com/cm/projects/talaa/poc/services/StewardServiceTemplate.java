@@ -22,7 +22,11 @@ public class StewardServiceTemplate implements StewardService {
     public StewardServiceTemplate() {
         this.log = LoggerFactory.getLogger(this.getClass());
     }
-
+    /**
+     * Reverses a string while maintaining special character position by traversing from both ends of a string
+     * @param input
+     * @return reversed string
+     */
     @Override
     public String reverseString(String input) {
         char str[] = input.toCharArray();
