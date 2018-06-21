@@ -13,7 +13,7 @@ To run the application change into target directory using your command line and 
 
 ----
     $ cd target/
-    $ java -jar tulaa-poc-1.0.0.jar
+    $ java -jar tulaa-poc-client-1.0.0.jar
 ----
 
 After the application runs successfully you can access the portal from http://localhost:9092/
